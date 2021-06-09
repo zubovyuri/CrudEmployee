@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS employees
     service_number character varying(30),
     date_appointment date NOT NULL,
     date_dismissal date,
-    salary bigserial NOT NULL,
+    salary numeric(38, 2) NOT NULL,
     PRIMARY KEY (id)
 );
