@@ -1,0 +1,45 @@
+###
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "name": "Грибанова Марина Анатольевна",
+  "serviceNumber": "136у",
+  "dateAppointment": "2021-04-25",
+  "dateDismissal": null,
+  "salary": 35800.00
+}
+
+###
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "name": "Кирьянов Антов Васильевич",
+  "serviceNumber": "137у",
+  "dateAppointment": "2021-05-13",
+  "dateDismissal": null,
+  "salary": 54000.00
+}
+###
+GET http://localhost:8080/employees
+
+###
+GET http://localhost:8080/employees/id/2
+
+###
+PUT http://localhost:8080/employees/id/2
+Content-Type: application/json
+
+{
+  "salary": 100000
+}
+
+###
+GET http://localhost:8080/employees/serviceNumber/137у
+
+###
+GET http://localhost:8080/employees/salary/35000&50000
+
+###
+DELETE http://localhost:8080/employees/id/2
