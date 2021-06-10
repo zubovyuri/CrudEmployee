@@ -64,33 +64,6 @@ public class EmployeeServiceImpl implements EmployeeService {
             employeeRepository.save(emp);
             return true;
         }).orElse(false);
-        /*
-        if (oldOptional.isPresent()) {
-            Employee old = oldOptional.get();
-            if (employee.getName() != null) {
-                old.setName(employee.getName());
-            }
-            if (employee.getDateAppointment() != null) {
-                old.setDateAppointment(employee.getDateAppointment());
-            }
-            if (employee.getDateDismissal() != null) {
-                old.setDateDismissal(employee.getDateDismissal());
-            }
-            if (employee.getSalary() != null) {
-                old.setSalary(employee.getSalary());
-            }
-            if (employee.getServiceNumber() != null) {
-                old.setServiceNumber(employee.getServiceNumber());
-            }
-            if (employee.getDateAppointment() != null) {
-                old.setDateAppointment(employee.getDateAppointment());
-            }
-            employeeRepository.save(old);
-            return true;
-        }
-        return false;
-
-         */
     }
 
     @Override
