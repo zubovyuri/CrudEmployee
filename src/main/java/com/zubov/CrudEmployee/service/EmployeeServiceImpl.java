@@ -55,6 +55,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public boolean update(Employee employee, Long id) {
         Optional<Employee> oldOptional = employeeRepository.findById(id);
+        return oldOptional.map(emp -> {
+            if (employee.getName() != null) { emp.setName(employee.getName()); }
+            if (employee.getServiceNumber() != null) { emp.setServiceNumber(employee.getServiceNumber());}
+            if (employee.getDateAppointment() != null) { emp.setDateAppointment(employee.getDateAppointment());}
+            if (employee.getDateDismissal() != null) { emp.setDateDismissal(employee.getDateDismissal());}
+            if (employee.getSalary() != null) { emp.setSalary(employee.getSalary());}
+            employeeRepository.save(emp);
+            return true;
+        }).orElse(false);
+        /*
         if (oldOptional.isPresent()) {
             Employee old = oldOptional.get();
             if (employee.getName() != null) {
@@ -79,6 +89,8 @@ public class EmployeeServiceImpl implements EmployeeService {
             return true;
         }
         return false;
+
+         */
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.zubov.CrudEmployee.model;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 @Table(name = "employees")
@@ -11,7 +12,7 @@ public class Employee {
     @Id
     @Column(name = "id")
     @GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "employee_generator")
-    @SequenceGenerator(name = "employee_generator", sequenceName = "employees_id_seq")
+    @SequenceGenerator(name = "employee_generator", sequenceName = "employees_id_seq", allocationSize = 1)
     private Long id;
 
     @Column(name = "name", nullable = false, length = 300)

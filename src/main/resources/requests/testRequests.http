@@ -15,7 +15,7 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "name": "Кирьянов Антов Васильевич",
+  "name": "Кирьянов Антон Васильевич",
   "serviceNumber": "137у",
   "dateAppointment": "2021-05-13",
   "dateDismissal": null,
